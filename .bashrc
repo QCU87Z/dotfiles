@@ -21,6 +21,4 @@ export GIT_PS1_SHOWCOLORHINTS=true
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
-#PROMPT_COMMAND=$(sed -r 's|^(.+)(\\\$\s*)$|__git_ps1 "\1" "\2"|' <<< $PS1)
-
-export PROMPT_COMMAND='__git_ps1 "\w" "\n\\\$ "' # Git branch (relies on git-prompt.sh)
+export PROMPT_COMMAND='__git_ps1 "\n\[\033[31m\]\w\[\033[m\] on \[\033[34m\]\h\[\033\[m\]" "\[\033[33m\]\n\\\$\[\033[m\] "' # Git branch (relies on git-prompt.sh)
