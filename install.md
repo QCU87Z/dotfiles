@@ -11,7 +11,7 @@ i3-gaps
   * rofi 
   * compton 
   * dunst
-2. Document Compliling
+2. Document Compliling (pandoc -s -o install.pdf ~/dotfiles/install.md)
   * pandoc
   * texlive-base
   * texlive-collection-latexrecommended
