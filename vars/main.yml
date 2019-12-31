@@ -1,0 +1,3 @@
+---
+configure_vm: true
+configure_vim_install_plugins: true
