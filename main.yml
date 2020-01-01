@@ -4,6 +4,7 @@
   hosts: all
   vars_files:
     - vault.yml
+    - vars/main.yml
   tasks:
     - include: tasks/configure_wallpaper.yml
       tags: wallpaper
