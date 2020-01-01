@@ -4,3 +4,6 @@ configure_vim_install_plugins: true
 
 configure_wallpaper: true
 configure_wallpaper_directory: ~/Pictures/wallpapers
+configure_wallpaper_resolution: 1920x1200
+
+configure_bash: true

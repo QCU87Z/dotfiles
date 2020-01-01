@@ -4,5 +4,9 @@
   package:
     name: feh
     state: installed
+  become: yes
 
 - name: configure_wallpaper | drop wallpapers
+  copy:
+      dest: "{{ configure_wallpaper_directory }}" 
+      src: home/Pictures/wallpapers/*

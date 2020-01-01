@@ -1,2 +1,12 @@
 ---
 #Do the ansibles
+- name: DOTFILES
+  hosts: all
+  tasks:
+    - include: configure_wallpaper.yml
+      tags: wallpaper
+      when: configure_wallpaper
+
+    - include: configure_bash.yml
+      tags: bash
+      when: configure_bash
