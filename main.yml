@@ -5,10 +5,10 @@
   vars_files:
     - vault.yml
   tasks:
-    - include: configure_wallpaper.yml
+    - include: tasks/configure_wallpaper.yml
       tags: wallpaper
       when: configure_wallpaper
 
-    - include: configure_bash.yml
+    - include: tasks/configure_bash.yml
       tags: bash
       when: configure_bash
