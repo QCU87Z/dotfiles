@@ -1,3 +1,6 @@
 ---
 configure_vm: true
 configure_vim_install_plugins: true
+
+configure_wallpaper: true
+configure_wallpaper_directory: ~/Pictures/wallpapers

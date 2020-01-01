@@ -39,3 +39,4 @@ i3-gaps
 * oderwat.indent-rainbow
 * vscoss.vscode-ansible
 * wholroyd.jinja
+* dhoeric.ansible-vault

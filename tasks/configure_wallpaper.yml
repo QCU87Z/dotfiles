@@ -1,0 +1,8 @@
+---
+
+- name: configure_wallpaper | install feh
+  package:
+    name: feh
+    state: installed
+
+- name: configure_wallpaper | drop wallpapers
