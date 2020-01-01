@@ -5,12 +5,16 @@
     name: epel-release
     state: present
   become: yes
+  tags:
+    - configure_wallpaper_install_feh
 
 - name: configure_wallpaper | install feh
   package:
     name: feh
     state: installed
   become: yes
+  tags:
+    - configure_wallpaper_install_feh
 
 - name: configure_wallpaper | drop wallpapers
   copy:
