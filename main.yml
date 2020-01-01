@@ -3,6 +3,9 @@
 - name: DOTFILES
   hosts: all
   tasks:
+    - include_vars:
+        file: vault.yml
+
     - include: configure_wallpaper.yml
       tags: wallpaper
       when: configure_wallpaper
