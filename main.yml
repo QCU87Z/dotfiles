@@ -2,8 +2,8 @@
 #Do the ansibles
 - name: DOTFILES
   hosts: all
-  include_vars:
-    file: vault.yml
+  vars_files:
+    - vault.yml
   tasks:
     - include: configure_wallpaper.yml
       tags: wallpaper
