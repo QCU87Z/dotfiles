@@ -2,9 +2,9 @@
 configure_vm: true
 configure_vim_install_plugins: true
 
-configure_wallpaper: true
+configure_wallpaper: false
 configure_wallpaper_install_feh: false
 configure_wallpaper_directory: ~/Pictures/wallpapers
-configure_wallpaper_resolution: 1920x1200
+configure_wallpaper_resolution: 3440x1440
 
 configure_bash: true

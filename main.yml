@@ -3,13 +3,13 @@
 - name: DOTFILES
   hosts: all
   vars_files:
-    - vault.yml
     - vars/main.yml
+
   tasks:
-    - include: tasks/configure_wallpaper.yml
+    - include: configure_wallpaper.yml
       tags: wallpaper
       when: configure_wallpaper
 
-    - include: tasks/configure_bash.yml
+    - include: configure_bash.yml
       tags: bash
       when: configure_bash

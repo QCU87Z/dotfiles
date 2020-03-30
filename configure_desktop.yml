@@ -1,0 +1,25 @@
+---
+
+- name: configure_wallpaper | install epel-release
+  package:
+    name: epel-release
+    state: present
+  become: yes
+  when:
+    - configure_wallpaper_install_feh
+
+- name: configure_wallpaper | install feh
+  package:
+    name: feh
+    state: installed
+  become: yes
+  when:
+    - configure_wallpaper_install_feh
+
+- name: configure_wallpaper | drop wallpapers
+  copy:
+      dest: "{{ configure_wallpaper_directory }}" 
+      src: home/Pictures/wallpapers/*
+
+- name: configure_wallpaper | install systemd timer
+
