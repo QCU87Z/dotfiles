@@ -17,3 +17,7 @@
     - include: configure_vim.yml
       tags: vim
       when: configure_vim
+
+    - include: configure_applications.yml
+      tags: vim
+      when: configure_applications
