@@ -4,8 +4,3 @@
   copy:
     dest: ~/.bashrc
     src: home/.bashrc
-
-- name: configure_bash | drop .bash
-  copy:
-    dest: "/home/{{ ansible_user }}"
-    src: home/.bash
