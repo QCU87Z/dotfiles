@@ -13,3 +13,7 @@
     - include: configure_bash.yml
       tags: bash
       when: configure_bash
+
+    - include: configure_vim.yml
+      tags: vim
+      when: configure_vim

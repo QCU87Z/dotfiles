@@ -1,0 +1,17 @@
+---
+
+- name: configure_vim | install vim
+  package:
+    name: vim
+    state: present
+  become: yes
+
+- name: configure_vim | copy vimrc
+  copy:
+    dest: ~/.vimrc
+    src: home/.vimrc
+
+- name: configure_vim | copy plugins
+  copy:
+    dest: ~/
+    src: home/.vim
