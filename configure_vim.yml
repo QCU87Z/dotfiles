@@ -12,6 +12,6 @@
     src: home/.vimrc
 
 - name: configure_vim | copy plugins
-  copy:
+  synchronize:
     dest: ~/
     src: home/.vim
