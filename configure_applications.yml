@@ -10,3 +10,19 @@
   copy:
     dest: ~/.config
     src: home/.config/terminator
+
+- name: configure_applications | install conky
+  package:
+    name: conky
+    state: present
+  become: yes
+
+- name: configure_applications | drop conky configuration
+  template:
+    dest: ~/.config/conky/conky.conf
+    src: conky.conf.j2
+  
+- name: configure_applications | drop conky autostart
+  copy:
+    dest: ~/.config/autostart/conky.desktop
+    src: home/.config/autostart/conky.desktop

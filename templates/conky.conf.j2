@@ -29,7 +29,7 @@ conky.config ={
   border_inner_margin = 6,
   border_width = 5, 
 
-  minimum_height = 1020,
+  minimum_height = 900,
 
   minimum_width = 280,
   maximum_width = 280,
@@ -77,7 +77,6 @@ ${color6}${hr 2}${color}
 ${voffset -6}
 ${font Montserrat Light:size=8}${color1}KERNEL:${color}${font}  $kernel ${alignr}$machine
 ${font Montserrat Light:size=8}${color1}UPTIME:${color}${font} ${alignr}$uptime_short
-${font Montserrat Light:size=8}${color1}SYSTEM:${color}${font} ${alignr}Linux Mint 19.1 MATE
   
 ${font :size=11}${color1}MEMORY ${color6}${hr 2}${color}
 ${voffset -15}
@@ -94,14 +93,14 @@ ${font Montserrat Light:size=8}${color1}01 - 04:${color}${font} ${goto 100}${cpu
 ${voffset -8}
 ${font :size=11}${color1}NETWORK ${color6}${hr 2}${color}
 ${voffset -15}
-${font Montserrat Light:size=8}${color1}LAN IP ADDR:${color}${font} ${alignr}${addr ens33}
-${font :size=10}${font Montserrat Light:size=8}${color1}SPEED: ${goto 70}UP:${color}${font} ${alignr}${upspeed ens33}   ${goto 180}${font Montserrat Light:size=8}${color1}DOWN:${color}${font} ${goto 220}${alignr}${downspeed ens33}${font}
+${font Montserrat Light:size=8}${color1}LAN IP ADDR:${color}${font} ${alignr}${addr {{ conky_interface }}}
+${font :size=10}${font Montserrat Light:size=8}${color1}SPEED: ${goto 70}UP:${color}${font} ${alignr}${upspeed {{ conky_interface }}}   ${goto 180}${font Montserrat Light:size=8}${color1}DOWN:${color}${font} ${goto 220}${alignr}${downspeed {{ conky_interface }}}${font}
 ${voffset -6}
-${font Montserrat Light:size=8}${color1}UPLOAD: ${color}${font} ${goto 80}${color4}${upspeedgraph ens33 15,210 ADFF2F 32CD32 -t}${color}
+${font Montserrat Light:size=8}${color1}UPLOAD: ${color}${font} ${goto 80}${color4}${upspeedgraph {{ conky_interface }} 15,210 ADFF2F 32CD32 -t}${color}
 ${voffset -14}
-${font Montserrat Light:size=8}${color1}DOWN:${color}${font} ${goto 80}${color4}${downspeedgraph ens33 15,210 FF0000 8B0000 -t}${color}
+${font Montserrat Light:size=8}${color1}DOWN:${color}${font} ${goto 80}${color4}${downspeedgraph {{ conky_interface }} 15,210 FF0000 8B0000 -t}${color}
 ${voffset -14}
-${font :size=10}${font Montserrat Light:size=8}${color1}TOTAL: ${goto 70}UP:${color}${font} ${goto 120}${totalup ens33}   ${goto 180}${font Montserrat Light:size=8}${color1}DOWN:${color}${font} ${goto 220}${alignr}${totaldown ens33}${font}
+${font :size=10}${font Montserrat Light:size=8}${color1}TOTAL: ${goto 70}UP:${color}${font} ${goto 120}${totalup {{ conky_interface }}}   ${goto 180}${font Montserrat Light:size=8}${color1}DOWN:${color}${font} ${goto 220}${alignr}${totaldown {{ conky_interface }}}${font}
 ${voffset 6}
 ${font :size=11}${color1}DISKS ${color6}${hr 2}${color}
 ${voffset -15}
@@ -128,7 +127,6 @@ ${font Montserrat Light:size=9}${color1}${top_mem name 5} ${color}${font} ${goto
 ${font Montserrat Light:size=9}${color1}${top_mem name 6} ${color}${font} ${goto 160}${top mem 6} % ${goto 235}${top cpu 6} %
 ${font Montserrat Light:size=9}${color1}${top_mem name 7} ${color}${font} ${goto 160}${top mem 7} % ${goto 235}${top cpu 7} %
 
-${font Montserrat Light:size=8}${color1}${alignr}by Kematzy${color}${font}
 ${voffset 6}
 
 ]];
